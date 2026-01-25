@@ -2,9 +2,6 @@ from utils.entiers import Entiers
 
 
 def probleme0005():
-    """
-    What is the smallest positive number that is evenly divisible by all of the numbers from 1 to n = 20?
-    """
     D = {}
     for k in range(2, 21):
         diviseurs_premiers = Entiers.facteurs_premiers(k)
