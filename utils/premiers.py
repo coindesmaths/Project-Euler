@@ -36,6 +36,7 @@ class NombresPremiers(list):
     def generer_seuil(self, seuil):
         while self[-1] < seuil:
             self.calculer_suivant()
+        del self[-1]
 
     def est_premier(n):
         if n == 1:
