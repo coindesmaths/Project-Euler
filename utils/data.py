@@ -18,5 +18,5 @@ class Data:
 
 
 if __name__ == "__main__":
-    data = Data.init(22)
-    print(data.split(","))
+    data = Data.init(8)
+    print(data)
