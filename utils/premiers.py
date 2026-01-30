@@ -3,9 +3,14 @@ import math
 
 class NombresPremiers(list):
 
-    def __init__(self):
+    def __init__(self, n=None, seuil=None):
         super().__init__()
         self += NombresPremiers.premiers_premiers()
+        if n is not None:
+            self.generer_n_premiers_termes(n)
+        else:
+            if seuil is not None:
+                self.generer_seuil(seuil)
 
     def premiers_premiers():
         return [2, 3, 5, 7, 11, 13]
