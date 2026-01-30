@@ -1,9 +1,13 @@
 class SuiteFibonacci(list):
 
-    def __init__(self):
+    def __init__(self, n=None, seuil=None):
         super().__init__()
-        self.append(0)
-        self.append(1)
+        self += [0, 1]
+        if n is not None:
+            self.generer_n_premiers_termes(n)
+        else:
+            if seuil is not None:
+                self.generer_seuil(seuil)
 
     def calculer_suivant(self):
         self.append(self[-2] + self[-1])
