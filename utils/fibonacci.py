@@ -22,6 +22,16 @@ class SuiteFibonacci(list):
             self.calculer_suivant()
 
 
+def generateur_fibonacci():
+    yield 1
+    yield 2
+    previous = 1
+    current = 2
+    while True:
+        previous, current = current, current + previous
+        yield current
+
+
 if __name__ == "__main__":
     fibo = SuiteFibonacci()
     fibo.generer_seuil(100)
