@@ -7,20 +7,17 @@ import os
 
 
 def code_importation():
-    return inspect.cleandoc(
-        """
+    return inspect.cleandoc("""
         import sys
         sys.path.append("..")
         from utils.entiers import Entiers
         from utils.fibonacci import SuiteFibonacci
         from utils.premiers import NombresPremiers
-        """
-    )
+        """)
 
 
 def code_entete(debut, fin):
-    return inspect.cleandoc(
-        f"""
+    return inspect.cleandoc(f"""
         <div style="padding:10px ;border:solid 4px #006699; border-radius: 10px; background-color:#CCEEFF;">
         <table width="100%">
             <tr>
@@ -42,8 +39,7 @@ def code_entete(debut, fin):
                 </td>
         </table>
         </div>
-    """
-    )
+    """)
 
 
 def obtenir_problemes():
@@ -55,16 +51,14 @@ def obtenir_problemes():
 
 def code_titre(n, problemes):
     titre = problemes[n]["Title"]
-    return inspect.cleandoc(
-        f"""
+    return inspect.cleandoc(f"""
         <h1 style="color: #006699;">
             <span style="margin-right: 20px;">███</span>
             <span>Problème {n}</span>
             <span style="margin-left: 20px; margin-right: -15px;">▏</span>
             {titre}
         </h1>
-        """
-    )
+        """)
 
 
 def obtenir_description(n):
